@@ -25,12 +25,12 @@
 
 #include "dev.h"
 
-static int int_3600 = 3600;
-static int min_sndbuf = SOCK_MIN_SNDBUF;
-static int min_rcvbuf = SOCK_MIN_RCVBUF;
-static int max_skb_frags = MAX_SKB_FRAGS;
+static int int_3600 __read_only = 3600;
+static int min_sndbuf __read_only = SOCK_MIN_SNDBUF;
+static int min_rcvbuf __read_only = SOCK_MIN_RCVBUF;
+static int max_skb_frags __read_only = MAX_SKB_FRAGS;
 
-static int net_msg_warn;	/* Unused, but still a sysctl */
+static int net_msg_warn __read_only;	/* Unused, but still a sysctl */
 
 int sysctl_fb_tunnels_only_for_init_net __read_mostly = 0;
 EXPORT_SYMBOL(sysctl_fb_tunnels_only_for_init_net);
