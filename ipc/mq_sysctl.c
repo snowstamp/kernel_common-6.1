@@ -13,11 +13,11 @@
 #include <linux/capability.h>
 #include <linux/slab.h>
 
-static int msg_max_limit_min = MIN_MSGMAX;
-static int msg_max_limit_max = HARD_MSGMAX;
+static int msg_max_limit_min __read_only = MIN_MSGMAX;
+static int msg_max_limit_max __read_only = HARD_MSGMAX;
 
-static int msg_maxsize_limit_min = MIN_MSGSIZEMAX;
-static int msg_maxsize_limit_max = HARD_MSGSIZEMAX;
+static int msg_maxsize_limit_min __read_only = MIN_MSGSIZEMAX;
+static int msg_maxsize_limit_max __read_only = HARD_MSGSIZEMAX;
 
 static struct ctl_table mq_sysctls[] = {
 	{
